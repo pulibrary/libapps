@@ -1,0 +1,135 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="media">
+
+            {{#featured_image}}
+                <div class="media-left">
+                    <img class="media-object img-thumbnail img-responsive s-lc-event-fi" src="{{featured_image}}" alt="{{title}}">
+                </div>
+            {{/featured_image}}
+
+            <div class="media-body">
+                <div class="btn-group pull-right" id="s-lc-event-tool-btns">
+                    <a class="btn btn-default" href="#" onclick="window.print(); return false;" data-container="body" data-toggle="tooltip" title="Print page" id="s-lc-event-b-p"><i class="fa fa-print fa-lg"></i><span class="sr-only">Print the page</span></a>
+                    <a class="btn btn-default" href="{{ical}}" data-container="body" data-toggle="tooltip" title="Add to Calendar using iCal" id="s-lc-event-b-c"><i class="fa fa-calendar fa-lg"></i><span class="sr-only">Add to a Calendar using iCal</span></a>
+                    <a class="btn btn-default" href="{{facebook_url}}" data-container="body" data-toggle="tooltip" title="Share on Facebook" id="s-lc-event-b-f" target="_blank"><i class="fa fa-facebook-square fa-lg"></i><span class="sr-only">Share page on Facebook</span></a>
+                    <a class="btn btn-default" href="{{twitter_url}}" data-container="body" data-toggle="tooltip" title="Share on Twitter" id="s-lc-event-b-t" target="_blank"><i class="fa fa-twitter-square fa-lg"></i><span class="sr-only">Share page on Twitter</span></a>
+                </div>
+
+                <!--<h1 class="media-heading">{{title}}</h1>-->
+                <div id="s-lc-event-desc">
+                    {{{description}}}
+                </div>
+
+                {{#lg_id}}
+                    <p>
+                        <strong>Related LibGuide: </strong>
+                        <a href="{{lg_url}}">{{lg_name}} by {{lg_owner}}</a>
+                    </p>
+                {{/lg_id}}
+
+                <dl class="dl-horizontal s-lc-event-dl">
+                    {{#series_datetimes}}
+                        <dt>Dates & Times:</dt>
+                        <dd>{{{series_datetimes}}}</dd>
+                    {{/series_datetimes}}
+
+                    {{#single_event}}
+                        <dt>Date:</dt>
+                        <dd>{{date}}
+                            {{#future_dates.0}}
+                                <i class="fa fa-calendar pad-left-med" aria-hidden="true"></i>
+                                <a href="#" onclick="jQuery('#future_{{id}}').toggle(); return false;"> Show more dates</a>
+                                <p id="future_{{id}}" style="display:none">
+                                    {{#future_dates}}
+                                        <a href="/event/{{event_id}}">{{start}}</a><br>
+                                    {{/future_dates}}
+                                </p>
+                            {{/future_dates.0}}
+                        </dd>
+                        <dt>Time:</dt>
+                        <dd>{{start}} {{#end}} - {{end}}{{/end}}</dd>
+                    {{/single_event}}
+
+                    {{#location}}
+                        <dt>Location:</dt>
+                        <dd>{{location}}</dd>
+                    {{/location}}
+
+                    {{#campus}}
+                        <dt>Campus:</dt>
+                        <dd>{{campus}}</dd>
+                    {{/campus}}
+
+                    {{#audiences.0}}
+                        <dt>Audience:</dt>
+                        <dd>{{#audiences}}
+                                <span class="s-lc-event-category-color" style="background-color:{{color}}"> </span>
+                                <span class="s-lc-event-category-link">
+                                    <a href="{{calendar_url}}&t=g&cal%5B%5D={{calendar_id}}&audience%5B%5D={{id}}">{{name}}</a>
+                                </span>  
+                            {{/audiences}}
+                        </dd>
+                    {{/audiences.0}}
+
+                    {{#categories_arr.0}}
+                        <dt>Categories: </dt>
+                        <dd>
+                            {{#categories_arr}}
+                                <span class="s-lc-event-category-color" style="background-color:{{color}}"> </span>
+                                <span class="s-lc-event-category-link">
+                                    <a href="{{calendar_url}}&t=g&d=0000-00-00&cal%5B%5D={{calendar_id}}&ct%5B%5D={{cat_id}}">{{name}}</a>
+                                </span>  
+                            {{/categories_arr}}
+                        </dd>
+                    {{/categories_arr.0}}
+                    {{#registration_cost}}
+                        <dt>Event Cost:</dt>
+                        <dd>{{registration_cost}}</dd>
+                    {{/registration_cost}}
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#registration_form}}
+    {{{registration_form}}}
+{{/registration_form}}
+
+{{#reg_expired}}
+    <div class="row margin-top-med">
+        <div class="col-md-2 s-lc-event-label"></div>
+        <div class="col-md-5">
+            <div class="alert alert-warning">{{reg_expired}}</div>
+        </div>
+    </div>
+{{/reg_expired}}
+
+{{#reg_expired_series}}
+    <div class="row margin-top-med">
+        <div class="col-md-2 s-lc-event-label"></div>
+        <div class="col-md-5">
+            <div class="alert alert-warning">{{reg_expired_series}}</div>
+        </div>
+    </div>
+{{/reg_expired_series}}
+
+{{#reg_early}}
+    <div class="row margin-top-med">
+        <div class="col-md-2 s-lc-event-label"></div>
+        <div class="col-md-5">
+            <div class="alert alert-info">{{reg_early}}</div>
+        </div>
+    </div>
+{{/reg_early}}
+{{{#more_info}}}
+<div class="row margin-top-med">
+    <div class="col-md-12">{{{more_info}}}</div>
+</div>
+{{{/more_info}}}
+
+<script>
+    jQuery("body").addClass("s-lc-public-evtp");
+
+</script>
