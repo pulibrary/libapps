@@ -1,0 +1,10 @@
+  /* line 77, LG_v2.scss */
+  header, footer, iframe, #s-lib-bc, .s-lg-rss, .s-lib-profile-image, .noprint {
+    display: none;
+  }
+
+  /* line 80, LG_v2.scss */
+  #s-lib-footer-public a[href]:after, #s-lg-tabs-container a[href]:after {
+    content: none;
+  }
+  
