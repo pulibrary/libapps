@@ -1,0 +1,24 @@
+.libchat button {
+  -webkit-box-shadow: 0 6px 6px -4px #aaa;
+  box-shadow: 0 6px 6px -4px #aaa;
+  font-size: 18px;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.libchat .libchat_online {
+  text-shadow: #333 1px 1px 2px;
+}
+
+.libchat .libchat_online:hover,
+.libchat .libchat_online:active,
+.libchat .libchat_online:focus {
+  background-color: #e87511 !important;
+  -webkit-transition: background-color 0.1s linear 0s;
+  transition: background-color 0.1s linear 0s;
+}

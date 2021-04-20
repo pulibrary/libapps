@@ -1,0 +1,51 @@
+@media (max-width: 991px) {
+  .affix-top, .affix, .affix-bottom {
+  position: static;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .affix-top {
+    position: static;
+    width:240px;
+  }
+  
+  .affix {
+    position: fixed;
+    width:240px;
+    top: 20px;
+  }
+  .affix-bottom {
+  position: absolute;
+  width:240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .affix-top {
+    position: static;
+  	width:270px;
+  }
+  
+  .affix {
+    position: fixed;
+    width:270px;
+    top: 20px;
+  }
+  .affix-bottom {
+  position: absolute;
+  width:270px;
+  }
+}
+/*change background color for menu boxes on a page */
+#affix-nav > li.active >.s-lg-boxnav >li.active { 
+  background-color: #DDD;
+  }
+/*change background color for menu boxes on a sub-page */
+#affix-nav > li.active >ul >.s-lg-boxnav .active { 
+  background-color: #DDD;
+  }
+/*adjust the position of the menu affix in edit mode to account for command bar height*/
+header.s-lib-cmd-bar ~ #s-lg-tabs-container > #s-lg-guide-tabs #affix-nav.affix {
+  top: 50px;
+} 

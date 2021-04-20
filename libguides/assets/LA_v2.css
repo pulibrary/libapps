@@ -1,0 +1,212 @@
+/* line 16, pul-springy-base.scss */
+html, body, button, input, select, textarea {
+  font-family: "DejaVu Sans", Roboto, Arial, serif;
+  color: #333333;
+}
+
+/* line 20, pul-springy-base.scss */
+body {
+  min-height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  /*font-size: $font-size;*/
+}
+
+/* line 26, pul-springy-base.scss */
+ul.nav-tabs, ul.nav-pills {
+  font-family: "Droid Serif", Georgia, Times, serif;
+}
+
+/* line 29, pul-springy-base.scss */
+a, .ui-widget-content a {
+  color: #477DCA;
+  text-decoration: none;
+  font-weight: 500;
+}
+/* line 33, pul-springy-base.scss */
+a:hover, .ui-widget-content a:hover {
+  -webkit-transition: color 0.1s linear;
+  -webkit-transition-delay: 0s;
+  -moz-transition: color 0.1s linear 0s;
+  -o-transition: color 0.1s linear 0s;
+  transition: color 0.1s linear 0s;
+}
+
+/* line 35, pul-springy-base.scss */
+a:hover {
+  color: #2c5999;
+}
+
+/* line 38, pul-springy-base.scss */
+a:active, a:focus {
+  color: #2c5999;
+  outline: none;
+}
+
+/* line 42, pul-springy-base.scss */
+h1, h2, h3 {
+  font-family: "Droid Serif", Georgia, Times, serif;
+}
+
+/* line 45, pul-springy-base.scss */
+h4, h5, h6 {
+  font-family: "DejaVu Sans", Roboto, Arial, serif;
+}
+
+/* line 48, pul-springy-base.scss */
+h1 {
+  color: #e87511;
+  font-size: 2em;
+}
+
+/* line 52, pul-springy-base.scss */
+h2 {
+  color: #0098f4;
+  font-size: 1.5em;
+}
+
+/* line 56, pul-springy-base.scss */
+h3 {
+  font-size: 1.25em;
+  color: #7f3d00;
+}
+
+/* line 60, pul-springy-base.scss */
+h4 {
+  font-size: 1.15em;
+  color: #e87511;
+}
+
+/* line 64, pul-springy-base.scss */
+h5 {
+  font-size: 0.85em;
+  color: #0098f4;
+}
+
+/* line 68, pul-springy-base.scss */
+h6 {
+  font-size: 0.75em;
+}
+
+/* line 71, pul-springy-base.scss */
+h2 a {
+  color: #0098f4;
+  text-decoration: none;
+}
+
+/* line 75, pul-springy-base.scss */
+h3 a {
+  color: #7f3d00;
+  text-decoration: none;
+}
+
+/* line 79, pul-springy-base.scss */
+.form-control {
+  height: 32px;
+}
+
+/* line 82, pul-springy-base.scss */
+hr {
+  border-color: #CCC;
+}
+
+/*pul_base_styles overrides start*/
+/* line 87, pul-springy-base.scss */
+footer h2 {
+  color: #333333;
+}
+/* line 90, pul-springy-base.scss */
+footer a {
+  font-weight: normal;
+}
+
+/*needed to add this to make search box spacing right*/
+/* line 96, pul-springy-base.scss */
+.form-item, .form-action {
+  margin-bottom: 1em;
+}
+
+/* line 99, pul-springy-base.scss */
+.l-region--branding .block--allsearch-block-allsearch-search form > div div.form-item-query input[type=text] {
+  line-height: 1.25em;
+}
+
+/* line 102, pul-springy-base.scss */
+.l-region--branding .block--allsearch-block-allsearch-search form > div input[type=submit] {
+  padding: 2px 10px 5px 10px;
+}
+
+/* line 105, pul-springy-base.scss */
+#block-system-main-menu ul {
+  padding: 0px;
+  /* to align the PUL header menu to the left */
+  /*margin: 0px;*/
+}
+
+/* line 109, pul-springy-base.scss */
+footer nav ul {
+  padding: 0px;
+  /*to make footer flush*/
+}
+
+/*pul_base_styles overrides end*/
+/* line 4, LA_v2.scss */
+div.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 8, LA_v2.scss */
+#s-la-bc .breadcrumb {
+  font-size: 1em;
+  font-family: "Droid Serif", Georgia, Times, serif;
+  background-image: none;
+  padding-left: 0px;
+}
+/* line 13, LA_v2.scss */
+#s-la-bc .breadcrumb a {
+  font-weight: bold;
+}
+
+/* line 17, LA_v2.scss */
+.navbar-text, #s-la-search-showqform, #s-la-search-askbutton {
+  display: none;
+}
+
+/* line 20, LA_v2.scss */
+#s-la-public-header {
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+.s-la-faq-owner {display: none;}
+/* line 23, LA_v2.scss */
+.s-la-faq-listing-meta .label-topic, .s-la-faq-topics .label-topic {
+  background-color: #FFF;
+}
+
+/* line 26, LA_v2.scss */
+.label a {
+  color: #477DCA;
+}
+/* line 28, LA_v2.scss */
+.label a:hover {
+  color: #2c5999;
+}
+/* line 31, LA_v2.scss */
+.label a:active, .label a:focus {
+  color: #2c5999;
+  outline: none;
+}
+
+/*to clean up print view*/
+@media print {
+  /* line 38, LA_v2.scss */
+  header, footer, iframe, #s-lib-bc, .s-lg-rss, .s-lib-profile-image, .noprint {
+    display: none;
+  }
+
+  /* line 41, LA_v2.scss */
+  #s-lib-footer-public a[href]:after, #s-lg-tabs-container a[href]:after {
+    content: none;
+  }
+}

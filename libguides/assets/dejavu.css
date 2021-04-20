@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "DejaVu Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: url("//libapps.s3.amazonaws.com/sites/77/include/DejaVuSansCondensed-webfont.woff") format("woff"), 
+  url("//libapps.s3.amazonaws.com/sites/77/include/DejaVuSansCondensed-webfont.ttf") format("truetype"), 
+  url("//libapps.s3.amazonaws.com/sites/77/include/DejaVuSansCondensed-webfont.eot") format("embedded-opentype"), 
+  url("//libapps.s3.amazonaws.com/sites/77/include/DejaVuSansCondensed-webfont.eot") format("svg");
+}

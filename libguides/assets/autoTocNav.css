@@ -1,0 +1,22 @@
+/*for my script that auto generates a TOC and nav for hidden divs*/
+
+/*change the background color when hovering over the nav boxes*/
+#s-lg-guide-tabs .s-lg-boxnav .list-group-item.boxNav:hover, .boxNav:hover {
+    background-color:rgb(197, 206, 249);
+    cursor:pointer;
+}
+/*remove hyperlink underline in nav boxes*/
+.boxNav a {
+    text-decoration:none;
+}
+/*make nav box text bold*/
+.currentNav a {
+    font-weight:bold;
+}
+
+/*match color of chevron to link text*/
+.list-group-item.currentNav i {
+    color:#477DCA;
+}
+/*hide the home page of a guide in the LG auto-generated guide TOC box*/
+.box_toc_current {display:none;}
