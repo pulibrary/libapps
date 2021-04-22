@@ -1,0 +1,576 @@
+<link rel="icon" href="https://library.princeton.edu/sites/default/files/libicon.ico">
+<link rel="stylesheet" type="text/css" href="https://use.typekit.net/gwb8hdb.css">
+<!--<link rel="stylesheet" type="text/css" href="//libapps.s3.amazonaws.com/sites/77/include/pul-base.libguides.min.css">-->
+<link rel="stylesheet" type="text/css" href="//libapps.s3.amazonaws.com/sites/77/include/pul-base.libguides.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script type="text/javascript" src="//libapps.s3.amazonaws.com/sites/77/include/libguides-scripts.js"></script>
+<script type="text/javascript" src="//libapps.s3.amazonaws.com/sites/77/include/library-alert.js"></script>
+
+<style>
+    body {
+        background: #fff;
+    }
+
+    a:focus {
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: 3px;
+    }
+
+    .l-region--branding>h2 {
+        margin: 0;
+    }
+
+    .l-region--navigation .submenu li {
+        line-height: 50px;
+    }
+
+    #block-system-main-menu ul {
+        margin-bottom: 0;
+    }
+
+    #s-lc-public-cust-header+.container {
+        min-height: calc(100vh - 465px);
+    }
+
+    #s-lc-public-skiplink {
+        display: none;
+    }
+
+    .l-region--alert a {
+        color: #054aab;
+        text-decoration: underline;
+    }
+
+    /*#s-lc-public-pt {
+display: none;
+}*/
+
+    .btn-primary,
+    .btn-info.dropdown-toggle,
+    .btn-info.active,
+    .btn-info:active,
+    .open>.dropdown-toggle.btn-info {
+        border-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        background-color: #040404;
+        border: 0;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary:focus {
+        background-color: #e87411;
+        border: 0;
+    }
+
+    .s-lc-public-footer {
+        display: none;
+    }
+
+    .s-lc-box-thinborder .s-lc-box-title {
+        border: 0;
+    }
+
+    #s-lc-box-3860-container ul,
+    #s-lc-box-28130-container ul,
+    .modal-body ul {
+        list-style-type: disc;
+        margin: 1rem 0 1.5rem 1rem;
+        padding-left: 1rem;
+    }
+
+    li {
+        line-height: 1.75rem;
+    }
+
+    #s-lc-box-3860-container ul ul,
+    #s-lc-box-28130-container ul ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    #s-lc-public-header {
+        padding-bottom: 0;
+    }
+
+    .s-lc-public-header-text {
+        margin-bottom: 0;
+    }
+
+    #s-lc-box-28129-container {
+        margin-top: 0;
+    }
+
+    h1#s-lc-public-header-title,
+    h1#s-lc-public-pt,
+    .s-lc-box-thinborder .s-lc-box-title h2,
+    .s-lc-box-content h3,
+    .s-lc-app-s1h3,
+    h2,
+    h3 {
+        color: #040404;
+        font-weight: 500;
+        font-family: "franklin-gothic-urw", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    }
+
+    h1#s-lc-public-header-title,
+    h1#s-lc-public-pt,
+    h3.s-lc-c-erh {
+        font-size: 32px;
+    }
+
+    h1#s-lc-public-pt {
+        margin: 20px 10px 10px 0;
+    }
+
+    .s-lc-box-thinborder .s-lc-box-title h2 {
+        font-size: 24px;
+    }
+
+    .s-lc-box-content h3 {
+        font-size: 18px;
+    }
+
+    .nav-tabs>li>a {
+        border-radius: 0;
+        background-color: #f5f4f1;
+    }
+
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover {
+        border-radius: 0;
+        font-weight: 500;
+        color: black;
+    }
+
+    #s-lc-box-28130-container .nav-tabs {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    #s-lc-eq-navform h1 {
+        display: none;
+    }
+
+    #s-lc-eq-navform label,
+    #s-lc-eq-navform select,
+    #equip_ .fc button {
+        font-size: 18px;
+        height: auto;
+    }
+
+    #s-lc-eq-navform label[for=capacity],
+    #s-lc-eq-navform #capacity {
+        display: none;
+    }
+
+    #time_grid_cont {
+        margin-bottom: 1.5em;
+    }
+
+    img {
+        padding: 4px;
+        border: 1px solid #ddd;
+    }
+
+    .wrapper--navigation {
+        z-index: 9;
+    }
+
+    #s-lc-public-pd {
+        padding: 1em 0;
+    }
+
+    #s-lc-filter-date {
+        width: 220px;
+    }
+
+    #cal-form h2 {
+        margin-top: 1em;
+    }
+
+    .s-lc-evt-date {
+        height: initial;
+    }
+
+    /* calendar */
+    .s-lc-c-erh span,
+    #s-lc-c-list-cont .s-lc-mc-evt-time {
+        color: #222;
+    }
+
+    #s-lc-c-e-cat .label {
+        background-color: #E8E8E8 !important;
+        color: #222;
+        display: inline-block;
+    }
+
+    #s-lc-c-e-cat .label .fa-times {
+        color: #222 !important;
+    }
+
+    #s-lc-c-list-cont .s-lc-mc-day-num {
+        background-color: #e8e8e8;
+        color: #222;
+    }
+
+    .s-lc-c-evt .btn-success {
+        background-color: #DAF6E0;
+        color: #124A1F;
+    }
+
+    .s-lc-c-evt .btn-info {
+        background-color: #E5F5FF;
+        color: #003670;
+    }
+
+    /* fixes registration button offset */
+    #event-pre-registration .col-sm-offset-3 {
+        margin-left: 0;
+    }
+
+    /* /calendar page */
+    .s-lc-public-main {
+        padding: 2rem 0;
+    }
+
+    #s-lc-public-pd {
+        display: none;
+    }
+
+    #calendar_12260 #s-lc-c-list-cont .s-lc-c-erh {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px 1px 1px 1px);
+        /* IE6, IE7 */
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+        /* added line */
+    }
+
+    #calendar_12260 #s-lc-c-list-cont .s-lc-c-erc:before {
+        content: "Events and Workshops";
+        font-size: 32px;
+    }
+
+    .col-md-9.s-lc-c-r {
+        padding: 0 0 0 2rem;
+    }
+
+    .s-lc-c-erc {
+        border-bottom: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .media.s-lc-c-evt:last-child {
+        border-bottom: 0;
+    }
+
+    /* changes size of event image */
+    .s-lc-event-fi {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    @media (min-width: 769px) {
+        .s-lc-event-fi {
+            width: 25vw !important;
+            margin-right: 0;
+            margin-left: 20px;
+        }
+    }
+
+    .media-left {
+        float: right;
+        padding-left: 10px;
+        padding-right: 0;
+    }
+
+    #s-lc-event-desc {
+        margin-top: 40px;
+    }
+
+    .alert--level__info {
+        background: #bccee5;
+    }
+
+    .l-region--alert:after {
+        content: none;
+    }
+
+    .s-lc-content-hours a,
+    .nav-tabs>li>a {
+        color: #1a1a1a;
+    }
+
+    .s-lc-content-hours a {
+        font-weight: bold;
+    }
+
+    .s-lc-time,
+    .s-lc-h-sublocname,
+    .s-lc-closed,
+    .s-lc-note {
+        font-size: 14px;
+    }
+
+    .s-lc-closed {
+        color: #666;
+    }
+
+    .s-lc-h-head-date {
+        color: #1a1a1a;
+    }
+
+    .s-lc-h-w-cont th {
+        min-width: 137px;
+    }
+
+    #s-lc-box-10007 .nav-tabs {
+        display: none;
+    }
+
+    /* LibCal Homepage - Previous version */
+    .s-lc-public-page-1 .s-lc-column-bottom {
+        display: none;
+    }
+
+    .s-lc-public-page-1 .s-lc-column-top p {
+        margin-bottom: 1.5rem;
+    }
+
+    .modal-dialog {
+        width: 80% !important;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .modal-header {
+        padding: 1rem 2rem;
+    }
+
+    .s-lc-section-header {
+        display: none;
+    }
+
+    .s-lc-section-header+p {
+        margin: 0;
+    }
+
+    .seat-info-modal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .seat-info-modal img {
+        width: 100%;
+        max-width: 100%;
+        border: 0;
+        padding: 0;
+    }
+
+    @media (min-width: 768px) {
+        .seat-info-modal .left-col {
+            flex-basis: 30%;
+            padding: 1rem;
+        }
+
+        .seat-info-modal .right-col {
+            flex-basis: 70%;
+            padding: 1rem;
+        }
+    }
+
+    .s-lc-info-label {
+        display: inline;
+        padding: 5px 7px;
+        font-weight: bold;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+    }
+
+    .fa-wheelchair-alt {
+        margin-left: 14px;
+    }
+
+    .fc-cell-text .fa {
+        color: gray;
+    }
+
+    a .fc-cell-text {
+        color: black;
+        font-size: 14px;
+    }
+
+    .floorplan-heading small {
+        display: block;
+        font-weight: normal;
+        margin-top: 0.5rem;
+        font-style: italic;
+    }
+
+    .floorplans {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .floor {
+        background: black;
+        border-radius: 5px;
+        margin: 5px;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .floor::before {
+        content: "";
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.25;
+        z-index: -1;
+    }
+
+    .floor a {
+        color: white;
+        text-decoration: none;
+        padding: 1rem;
+        display: block;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+    .floor a:hover {
+        background: black;
+    }
+
+    .floorplans.firestone .floor:nth-child(1)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Firestone_-_1st_Floor_sm.png");
+    }
+
+    .floorplans.firestone .floor:nth-child(2)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Firestone_-_2nd_Floor_sm.png");
+    }
+
+    .floorplans.firestone .floor:nth-child(3)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Firestone_-_3rd_Floor_sm.png");
+    }
+
+    .floorplans.firestone .floor:nth-child(4)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Firetone_-_A_Floor_sm.png");
+    }
+
+    .floorplans.firestone .floor:nth-child(5)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Firestone_-_B_Floor_sm.png");
+    }
+
+    .floorplans.firestone .floor:nth-child(6)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Firestone_-_C_Floor_sm.png");
+    }
+
+    .floorplans.architecture .floor:nth-child(1)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Architecture_-_Main_Floor_sm.png");
+    }
+
+    .floorplans.eastasian .floor:nth-child(1)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/East_Asian_-_3rd_Floor_sm.png");
+    }
+
+    .floorplans.eastasian .floor:nth-child(2)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/East_Asian_-_4th_Floor_sm.png");
+    }
+
+    .floorplans.engineering .floor:nth-child(1)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Engineering_-_A_Floor_sm.png");
+    }
+
+    .floorplans.engineering .floor:nth-child(2)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Engineering_-_B_Floor_sm.png");
+    }
+
+    .floorplans.lewis .floor:nth-child(1)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Lewis_-_2nd_Floor_sm.png");
+    }
+
+    .floorplans.lewis .floor:nth-child(2)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Lewis_-_3rd_Floor_sm.png");
+    }
+
+    .floorplans.lewis .floor:nth-child(3)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Lewis_-_4th_Floor_sm.png");
+    }
+
+    .floorplans.marquand .floor:nth-child(1)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Marquand_-_1st_Floor_sm.png");
+    }
+
+    .floorplans.marquand .floor:nth-child(2)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Marquand_-_2nd_Floor_sm.png");
+    }
+
+    .floorplans.marquand .floor:nth-child(3)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Marquand_-_AB_Floor_sm.png");
+    }
+
+    .floorplans.mendel .floor:nth-child(1)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Mendel_-_1st_Floor_sm.png");
+    }
+
+    .floorplans.mendel .floor:nth-child(2)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Mendel_-_2nd_Floor_sm.png");
+    }
+
+    .floorplans.stokes .floor:nth-child(1)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/accounts/20705/images/Stokes_-_Main_Floor_sm.png");
+    }
+
+    .floorplans.makerspace .floor:nth-child(1)::before {
+        background-image: url("https://libapps.s3.amazonaws.com/customers/77/images/Makerspace.png");
+    }
+
+    #s-lc-eq-navform {
+        margin-top: 0;
+    }
+
+    .s-lc-resource-description {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .s-lc-resource-description p,
+    .s-lc-resource-description ul {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+
+    .s-lc-resource-description li {
+        line-height: 1.5;
+    }
+
+    #s-lc-eq-bform-submit+#s-lc-eq-auth-lobtn {
+        display: none;
+    }
+
+</style>
