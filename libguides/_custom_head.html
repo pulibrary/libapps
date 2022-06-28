@@ -10,471 +10,495 @@
 <script type="text/javascript" src="//libapps.s3.amazonaws.com/sites/77/include/library-alert.js"></script>
 
 <style>
-    :root {
-        --pu-gray: #f0f0f0;
-        --pu-dark-gray: #c8c8c8;
-        --pu-black: #1a1a1a;
-        --pu-orange: #e77500;
-    }
+:root {
+    --pu-gray: #f0f0f0;
+    --pu-dark-gray: #c8c8c8;
+    --pu-black: #1a1a1a;
+    --pu-orange: #e77500;
+}
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    body {
-        font-family: franklin-gothic-urw, sans-serif;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1.375;
-    }
+body {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.375;
+}
 
-    .alert--message h3 {
-        color: #040404;
-        font-weight: 500;
-        font-family: "franklin-gothic-urw", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-    }
+.alert--message h3 {
+    color: #040404;
+    font-weight: 500;
+    font-family: "franklin-gothic-urw", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
 
-    .l-region--alert a {
-        color: #054aab;
-        text-decoration: underline;
-    }
+.l-region--alert a {
+color: #054aab;
+text-decoration: underline;
+}
 
-    .l-region--branding h2 {
-        margin: 0;
-    }
+.l-region--branding h2 {
+margin: 0;
+}
 
-    .container {
-        padding: 0 15px;
-    }
+.container {
+    padding: 0 15px;
+}
 
-    .s-lib-box-content {
-        padding: 0;
-    }
+.s-lib-box-content {
+    padding: 0;
+}
 
-    #s-lg-index-list-guides .s-lib-box-content {
-        padding: 10px;
-    }
+#s-lg-index-list-guides .s-lib-box-content {
+    padding: 10px;
+}
 
-    .homepage .s-lib-box.s-lib-box-std {
-        border: none;
-        box-shadow: none;
-    }
+.homepage .s-lib-box.s-lib-box-std {
+    border: none;
+    box-shadow: none;
+}
 
-    .homepage-section .s-lib-box-std .s-lib-box-title,
-    .homepage-section .media-object h2 {
-        background: none;
-        border: none;
-        font-weight: 500;
-        font-size: 1.6875rem;
-        padding: 0;
-        margin-bottom: 1.5rem;
-        position: relative;
-    }
+.homepage-section .s-lib-box-std .s-lib-box-title,
+.homepage-section .media-object h2 {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 1.6875rem;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
 
-    p {
-        font-size: 1.125rem;
-    }
+p {
+    font-size: 1.125rem;
+}
 
-    #s-lg-content-57452990 li,
-    #s-lg-content-58252468 li,
-    #s-lg-widget-1603304814139 li {
-        list-style-type: none;
-    }
+#s-lg-content-57452990 li,
+#s-lg-content-58252468 li,
+#s-lg-widget-1603304814139 li {
+    list-style-type: none;
+}
 
-    /* Featured Guides */
-    #s-lg-content-58252266 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+/* Featured Guides */
+#s-lg-content-58252266 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-    #s-lg-content-58252266>div {
-        flex-basis: 100%;
-    }
+#s-lg-content-58252266 > div {
+    flex-basis: 100%;
+}
 
-    #s-lg-content-58252266::before {
-        display: none;
-    }
+#s-lg-content-58252266::before {
+    display: none;
+}
+
+/* Browse by Discipline */
+#s-lg-content-57452990 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#s-lg-content-57452990 div {
+    flex-basis: 100%;
+    padding-right: 32px;
+    padding-bottom: 16px;
+}
+
+#s-lg-content-57452990 h3 {
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.44;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+#s-lg-content-57452990 h3::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    display: block;
+    background-color: var(--pu-black);
+    bottom: -8px;
+}
+
+/* Popular Guides */
+#s-lg-widget-1603304814139 ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#s-lg-widget-1603304814139 li {
+    flex-basis: 100%;
+}
+
+/* Cards - Featured and Popular Guides */
+.homepage-card,
+#s-lg-widget-1603304814139 li {
+    border: 1px solid var(--pu-dark-gray);
+    padding: 32px;
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.homepage-card a,
+#s-lg-widget-1603304814139 a {
+    font-weight: 700;
+    display: block;
+}
+
+.homepage-card a::after,
+#s-lg-widget-1603304814139 a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-card.icon,
+.media-object {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.homepage-card.icon img,
+.media-object img {
+    margin-right: 32px;
+}
+
+.homepage-card.icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.media-object img {
+    padding: 16px 32px 32px;
+}
+
+.homepage-card.icon .media-copy {
+    flex: 1;
+}
+
+.homepage-card p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Get Help */
+#s-lg-box-25276305 .s-lib-box-title {
+    display:none;
+}
+
+.media-object div {
+    flex: auto;
+}
+
+.btn-help {
+    border: 1px solid var(--pu-black);
+    border-left: 4px solid var(--pu-orange);
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: inline-block;
+    padding: 1rem 1.35rem;
+    margin: 1rem 0;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--pu-black);
+    width: 100%;
+}
+
+.btn-help:hover,
+.btn-help:focus {
+    color: var(--pu-black);
+    background: var(--pu-gray);
+    text-decoration: none;
+}
+
+hr {
+    margin: 16px 0 32px;
+}
+
+.s-lib-box-container li {
+    line-height: 1.375;
+}
+
+.homepage .s-lib-main a:not([class]),
+.homepage #s-lib-public-header-desc a:not([class]) {
+    text-decoration: underline;
+    text-decoration-color: var(--pu-dark-gray);
+    text-decoration-thickness: 2px;
+    color: var(--pu-black);
+    font-size: 1.125rem;
+}
+
+.homepage .s-lib-main a:not([class]):hover,
+.homepage .s-lib-main a:not([class]):focus {
+    text-decoration-color: var(--pu-orange);
+}
+
+/* Search Box */
+.search-box form {
+    display: block;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.search-box form.pull-right {
+    float: none !important;
+}
+
+.search-box .form-group,
+.search-box .input-group {
+    width: 100%;
+}
+
+.search-box form>span {
+    display: none;
+}
+
+.search-box .input-group .input-group-btn {
+    width: 1%;
+}
+
+.search-box .form-control,
+.search-box .input-group-btn:last-child > .btn {
+    font-family: franklin-gothic-urw, sans-serif;
+    font-weight: 400;
+    height: auto;
+}
+
+.search-box .s-lg-public-search-field {
+    border-bottom: 2px solid var(--pu-black);
+}
+
+.search-box .s-lg-public-search-field:focus-within {
+    border-bottom: 2px solid var(--pu-orange);
+}
+
+.search-box #s-lg-guide-search {
+    font-size: 1.5rem;
+    color: var(--pu-black);
+    border: 0;
+    box-shadow: none;
+}
+
+.search-box .form-control:focus::placeholder {
+    color: var(--pu-black);
+    opacity: 1; 
+}
+
+.search-box .input-group-btn:last-child > .btn  { 
+    font-size: 0;
+    color: var(--pu-black);
+    border: 0;
+    box-shadow: none;
+}
+
+.search-box .input-group-btn:last-child > .btn:hover,
+.search-box .input-group-btn:last-child > .btn:focus  { 
+    background: transparent;
+    color: var(--pu-orange);
+}
+
+.search-box .btn:before  { 
+    font-family: FontAwesome; 
+    font-size: 1.875rem; 
+    display: inline-block; 
+    content: "\f002";
+}
+
+.homepage-section.two-col {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.homepage-section.two-col > div:first-child ul {
+    font-weight: 400;
+}
+
+.homepage-section.two-col > div:last-child a {
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
 
     /* Browse by Discipline */
-    #s-lg-content-57452990 {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-
     #s-lg-content-57452990 div {
-        flex-basis: 100%;
-        padding-right: 32px;
-        padding-bottom: 16px;
+        flex-basis: 50%;
     }
 
-    #s-lg-content-57452990 h3 {
-        font-weight: 500;
-        font-size: 1.125rem;
-        line-height: 1.44;
-        position: relative;
-        text-transform: uppercase;
-        margin-bottom: 24px;
+    /* Topic and Popular Guides */
+    .homepage-section.two-col > div:first-child {
+        flex-basis: 33%;
     }
-
-    #s-lg-content-57452990 h3::before {
-        content: "";
-        width: 100%;
-        height: 2px;
-        position: absolute;
-        display: block;
-        background-color: var(--pu-black);
-        bottom: -8px;
+    
+    .homepage-section.two-col > div:last-child {
+        flex-basis: 66%;
     }
 
     /* Popular Guides */
-    #s-lg-widget-1603304814139 ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
     #s-lg-widget-1603304814139 li {
-        flex-basis: 100%;
+        flex-basis: calc(50% - 8px);
     }
 
-    /* Cards - Featured and Popular Guides */
-    .homepage-card,
-    #s-lg-widget-1603304814139 li {
-        border: 1px solid var(--pu-dark-gray);
-        padding: 32px;
-        margin-bottom: 16px;
-        position: relative;
-    }
-
-    .homepage-card a,
-    #s-lg-widget-1603304814139 a {
-        font-weight: 700;
-        display: block;
-    }
-
-    .homepage-card a::after,
-    #s-lg-widget-1603304814139 a::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .homepage-card.icon,
-    .media-object {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .homepage-card.icon img,
-    .media-object img {
-        margin-right: 32px;
-    }
-
-    .homepage-card.icon img {
-        width: 32px;
-        height: 32px;
-    }
-
-    .media-object img {
-        padding: 16px 32px 32px;
-    }
-
-    .homepage-card.icon .media-copy {
-        flex: 1;
-    }
-
-    .homepage-card p {
-        margin: 0;
-        line-height: 1.6;
-        font-size: 1rem;
-    }
-
-    /* Get Help */
-    #s-lg-box-25276305 .s-lib-box-title {
+    #s-lg-widget-1603304814139 li:nth-last-child(-n+3) {
         display: none;
-    }
-
-    .media-object div {
-        flex: auto;
     }
 
     .btn-help {
-        border: 1px solid var(--pu-black);
-        border-left: 4px solid var(--pu-orange);
-        text-transform: uppercase;
-        font-size: 0.875rem;
-        font-weight: 500;
-        display: inline-block;
-        padding: 1rem 1.35rem;
-        margin: 1rem 0;
-        line-height: 1;
-        cursor: pointer;
-        color: var(--pu-black);
-        width: 100%;
+        width: auto;
     }
 
-    .btn-help:hover,
-    .btn-help:focus {
-        color: var(--pu-black);
-        background: var(--pu-gray);
-        text-decoration: none;
-    }
+    .media-object div {
+        padding-right: 32px;
+        flex: 1;
+    } 
+}
 
-    hr {
-        margin: 16px 0 32px;
-    }
-
-    .s-lib-box-container li {
-        line-height: 1.375;
-    }
-
-    .homepage .s-lib-main a:not([class]),
-    .homepage #s-lib-public-header-desc a:not([class]) {
-        text-decoration: underline;
-        text-decoration-color: var(--pu-dark-gray);
-        text-decoration-thickness: 2px;
-        color: var(--pu-black);
-        font-size: 1.125rem;
-    }
-
-    .homepage .s-lib-main a:not([class]):hover,
-    .homepage .s-lib-main a:not([class]):focus {
-        text-decoration-color: var(--pu-orange);
-    }
-
-    /* Search Box */
+@media (min-width: 1200px) {    
     .search-box form {
+        width: 50%;
+    }
+
+    /* Featured Guides */
+    #s-lg-content-58252266 > div {
+        flex-basis: calc(33% - 12px);
+    }
+    
+    /* Browse by Discipline */
+    #s-lg-content-57452990 div {
+        flex-basis: 25%;
+    }    
+
+    /* Popular Guides */
+    #s-lg-widget-1603304814139 li {
+        flex-basis: calc(33% - 8px);
+    }
+
+    #s-lg-widget-1603304814139 li:nth-last-child(-n+3) {
         display: block;
-        margin-bottom: 2rem;
-        width: 100%;
     }
+} 
 
-    .search-box form.pull-right {
-        float: none !important;
-    }
+/* System Footer */
+#s-lib-footer-brand,
+#s-lib-footer-rights,
+#s-lib-footer-support-link {
+display: none;
+}
 
-    .search-box .form-group,
-    .search-box .input-group {
-        width: 100%;
-    }
+#s-lib-footer-login-link {
+float:right;
+}
 
-    .search-box form>span {
-        display: none;
-    }
+#s-lib-footer-public {
+padding: 0.5rem;
+}
 
-    .search-box .input-group .input-group-btn {
-        width: 1%;
-    }
+.s-lib-footer {
+border-color: var(--pu-dark-gray);
+}
 
-    .search-box .form-control,
-    .search-box .input-group-btn:last-child>.btn {
-        font-family: franklin-gothic-urw, sans-serif;
-        font-weight: 400;
-        height: auto;
-    }
+/* breadcrumbs */
+.breadcrumb a {
+color: var(--pu-black);
+}
 
-    .search-box .s-lg-public-search-field {
-        border-bottom: 2px solid var(--pu-black);
-    }
+.breadcrumb #s-lib-bc-customer a {
+font-size: 0;
+}
 
-    .search-box .s-lg-public-search-field:focus-within {
-        border-bottom: 2px solid var(--pu-orange);
-    }
+.breadcrumb #s-lib-bc-customer a:before {
+    font-family: "FontAwesome";
+    content: "\f015";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    font-size: 1rem;
+}
 
-    .search-box #s-lg-guide-search {
-        font-size: 1.5rem;
-        color: var(--pu-black);
-        border: 0;
-        box-shadow: none;
-    }
+/* header description */
+#s-lib-public-header-desc {
+margin-bottom: 1.5rem;
+}
 
-    .search-box .form-control:focus::placeholder {
-        color: var(--pu-black);
-        opacity: 1;
-    }
+#s-lg-guide-main .s-lib-box-std .s-lib-box-title,
+.s-lg-tabs-side .s-lib-box-std .s-lib-box-title {
+font-size: 1.25rem; 
+}
 
-    .search-box .input-group-btn:last-child>.btn {
-        font-size: 0;
-        color: var(--pu-black);
-        border: 0;
-        box-shadow: none;
-    }
+#s-lg-guide-tabs {
+margin-bottom: 1.5rem;
+}
 
-    .search-box .input-group-btn:last-child>.btn:hover,
-    .search-box .input-group-btn:last-child>.btn:focus {
-        background: transparent;
-        color: var(--pu-orange);
-    }
+/* Portal pages */
+#s-lg-index-list-guides .s-lib-box-content {
+    color: #333;
+    background-color: var(--pu-gray);
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
 
-    .search-box .btn:before {
-        font-family: FontAwesome;
-        font-size: 1.875rem;
-        display: inline-block;
-        content: "\f002";
-    }
+#s-lg-index-list-guides .s-lib-box {
+border: 0;
+}
 
-    .homepage-section.two-col {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+#s-lg-index-list-guides .btn-help-popover {
+padding: 0 6px;
+}
 
-    .homepage-section.two-col>div:first-child ul {
-        font-weight: 400;
-    }
+.s-lib-box-idx-guide-list {
+margin-bottom: 5px;
+}
 
-    .homepage-section.two-col>div:last-child a {
-        font-weight: 700;
-    }
 
-    @media (min-width: 768px) {
-
-        /* Browse by Discipline */
-        #s-lg-content-57452990 div {
-            flex-basis: 50%;
-        }
-
-        /* Topic and Popular Guides */
-        .homepage-section.two-col>div:first-child {
-            flex-basis: 33%;
-        }
-
-        .homepage-section.two-col>div:last-child {
-            flex-basis: 66%;
-        }
-
-        /* Popular Guides */
-        #s-lg-widget-1603304814139 li {
-            flex-basis: calc(50% - 8px);
-        }
-
-        #s-lg-widget-1603304814139 li:nth-last-child(-n+3) {
-            display: none;
-        }
-
-        .btn-help {
-            width: auto;
-        }
-
-        .media-object div {
-            padding-right: 32px;
-            flex: 1;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .search-box form {
-            width: 50%;
-        }
-
-        /* Featured Guides */
-        #s-lg-content-58252266>div {
-            flex-basis: calc(33% - 12px);
-        }
-
-        /* Browse by Discipline */
-        #s-lg-content-57452990 div {
-            flex-basis: 25%;
-        }
-
-        /* Popular Guides */
-        #s-lg-widget-1603304814139 li {
-            flex-basis: calc(33% - 8px);
-        }
-
-        #s-lg-widget-1603304814139 li:nth-last-child(-n+3) {
-            display: block;
-        }
-    }
-
-    /* System Footer */
-    #s-lib-footer-brand,
-    #s-lib-footer-rights,
-    #s-lib-footer-support-link {
-        display: none;
-    }
-
-    #s-lib-footer-login-link {
-        float: right;
-    }
-
-    #s-lib-footer-public {
-        padding: 0.5rem;
-    }
-
-    .s-lib-footer {
-        border-color: var(--pu-dark-gray);
-    }
-
-    /* breadcrumbs */
-    .breadcrumb a {
-        color: var(--pu-black);
-    }
-
-    .breadcrumb #s-lib-bc-customer a {
-        font-size: 0;
-    }
-
-    .breadcrumb #s-lib-bc-customer a:before {
-        font-family: "FontAwesome";
-        content: "\f015";
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        position: relative;
-        font-size: 1rem;
-    }
-
-    /* header description */
-    #s-lib-public-header-desc {
-        margin-bottom: 1.5rem;
-    }
-
-    #s-lg-guide-main .s-lib-box-std .s-lib-box-title,
-    .s-lg-tabs-side .s-lib-box-std .s-lib-box-title {
-        font-size: 1.25rem;
-    }
-
-    #s-lg-guide-tabs {
-        margin-bottom: 1.5rem;
-    }
-
-    /* Portal pages */
-    #s-lg-index-list-guides .s-lib-box-content {
-        color: #333;
-        background-color: var(--pu-gray);
-        border: 1px solid #ddd;
-        padding: 10px 15px;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-    }
-
-    #s-lg-index-list-guides .s-lib-box {
-        border: 0;
-    }
-
-    #s-lg-index-list-guides .btn-help-popover {
-        padding: 0 6px;
-    }
-
-    .s-lib-box-idx-guide-list {
-        margin-bottom: 5px;
-    }
-
+a:focus {
+outline: 2px solid;
+}
+.boxNav a[href] {
+width: 100%;
+display: block;
+position: absolute;
+height: 100%;
+top: 0;
+left: 0;
+}
 </style>
 
 <script>
-    $(document).ready(function () {
-        $("#s-lg-guide-search").focus();
-    });
-
+$( document ).ready(function() {
+    $("#s-lg-guide-search").focus();
+// Libguides separates these navigation links into two
+// separate <a> tags, one with the link text, and one
+// with the href.  This code combines them into a
+// single <a> tag
+var contentsList = $("li.list-group-item.boxNav");
+for(i=0;i<contentsList.length;i++) {
+ if (contentsList[i].children[0] && contentsList[i].children[1]) {
+   // Take the link text from the second <a> tag
+   contentsList[i].children[0].text = contentsList[i].children[1].text;
+   // remove the duplicate <a> tag
+   contentsList[i].children[1].remove();
+ }
+}
+});
 </script>
