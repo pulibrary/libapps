@@ -487,18 +487,20 @@ left: 0;
 <script>
 $( document ).ready(function() {
     $("#s-lg-guide-search").focus();
+});
 // Libguides separates these navigation links into two
 // separate <a> tags, one with the link text, and one
 // with the href.  This code combines them into a
 // single <a> tag
-var contentsList = $("li.list-group-item.boxNav");
-for(i=0;i<contentsList.length;i++) {
- if (contentsList[i].children[0] && contentsList[i].children[1]) {
-   // Take the link text from the second <a> tag
-   contentsList[i].children[0].text = contentsList[i].children[1].text;
-   // remove the duplicate <a> tag
-   contentsList[i].children[1].remove();
- }
-}
+jQuery(window).load(function() {
+  var contentsList = $("li.list-group-item.boxNav");
+  for(i=0;i<contentsList.length;i++) {
+   if (contentsList[i].children[0] && contentsList[i].children[1]) {
+     // Take the link text from the second <a> tag
+     contentsList[i].children[0].text = contentsList[i].children[1].text;
+     // remove the duplicate <a> tag
+     contentsList[i].children[1].remove();
+   }
+  }
 });
 </script>
