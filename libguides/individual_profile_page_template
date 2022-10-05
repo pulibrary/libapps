@@ -1,0 +1,35 @@
+<body class="s-lib-public-body">
+		{{skip_link}}
+        <!-- BEGIN: Page Header -->
+            {{public_header}}
+        <!-- END: Page Header -->
+        <!-- BEGIN: Content Header -->
+        <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+            <div id="s-lib-bc">
+<!--                {{breadcrumbs}} -->      
+                   <ol id="s-lib-bc-list" class="breadcrumb">
+				
+					<li id="s-lib-bc-customer">
+						<a title="PUL" href="http://library.princeton.edu/">PUL
+						</a>
+					</li>
+					<li id="s-lib-bc-site">
+						<a title="LibGuides" href="http://libguides.princeton.edu">LibGuides
+						</a>
+					</li>
+					<li id="s-lib-bc-index">
+						<a href="http://library.princeton.edu/staff/specialists">Subject Specialists
+						</a>
+					</li>
+			</ol>
+            
+            </div>
+            <h1 id="s-lib-public-header-title">{{page_title}}</h1>
+            <div id="s-lib-public-header-desc">{{page_description}}</div>
+        </div>
+        <!-- END: Content Header -->
+        <!-- BEGIN: Nav Bar -->
+        <div id="s-lib-public-nav" class="container s-lib-side-borders">
+            {{page_nav}}
+        </div>
+        <!-- END: Nav Bar -->
