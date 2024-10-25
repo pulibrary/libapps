@@ -977,7 +977,7 @@ body {
 a,
 h2 a,
 h3 a {
-  text-decoration: none
+  text-decoration: underline
 }
 
 .submenu-toggle {
@@ -1260,7 +1260,7 @@ body {
 
 .ui-widget-content a,
 a {
-  color: #3D77C7;
+  color: #0066CC;
   font-weight: 500;
   overflow-wrap: break-word
 }
